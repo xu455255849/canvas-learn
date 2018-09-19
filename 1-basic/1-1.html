@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>1-1 生成一个画布并绘制文本</title>
+</head>
+<style>
+  #canvas {
+    background: #fff;
+    border: thin inset #aaaa;
+  }
+</style>
+<body>
+<canvas id="canvas" width="600" height="300"></canvas>
+<script>
+  var canvas = document.getElementById('canvas'),
+      contxt = canvas.getContext('2d');
+  
+  contxt.font = '18px Arial'
+  contxt.fillStyle = 'cornflowerblue'
+  contxt.strokeStyle = 'blue'
+  contxt.fillText('Hello Canvas', canvas.width / 2, canvas.height + 15)
+  contxt.strokeText('Hello Canvas', canvas.width / 2, canvas.height / 2 + 15)
+
+</script>
+</body>
+</html>
